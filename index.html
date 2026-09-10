@@ -1,15 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>CSCI225 Homepage -Tim Tyulenev</title>
-        <meta charset = "UTF-8";>
+        <title>CSCI225 Homepage of Tim Tyulenev</title>
     </head>
     <body>
-        <!-- le comment -->
-        <h1>Le heading </h1>
-        <h2>Le subheading</h2>
-        <h3>Le subsubheading</h3>
-        <p>Welcome to my page for CSCI225!</p>
-        <div> this is general div box </div>        
+        <!-- Header -->
+        <header>
+            <ul>
+                <li><a href="https://www.usca.edu/">USCA Main Page</a></li>
+                <li><a href="#portfolio">Jump to Portfolio section</a></li>
+                <li><a href="#assignment">Jump to Assignment section</a></li>
+                <li><a href="#schedule">Jump to Schedule section</a></li>
+            </ul>
+        </header>
+
+        <!-- Main Content area -->
+        <main> 
+            <section> 
+                <h2> Introduction </h2> 
+                <p>Welcome to my CSCI225 homepage! My name is <ins>Tim Tyulenev</ins>, and I am 
+                    a junior student at the University of South Carolina-Aiken trying
+                    to learn more about web development and programming. I fluently 
+                    speak two languages, <em>English</em> and <em>Russian</em>. My hobbies are simple,
+                    I enjoy playing video games, traveling, and spending time with my
+                    friends. I try to learn a little bit more about cyber analysis
+                    for my future career, and this class is a step towards that goal.
+                    <br>
+                    <img src="img/royaltyFree.png" alt="Image for assignment" width="150" height="150">
+                </p>
+            </section>
+            <section> 
+                <h2 id="portfolio"> Portfolio </h2> 
+                <p>Here are some of my projects:</p>
+                <ul>
+                    <li>Project 1: Made a simple website that you see here</li>
+                        <ul>
+                            <li>Required basic knowledge of HTML</li>
+                        </ul>
+                    <li>Project 2: Co-wrote a research paper about the QUIC protocol</li>
+                        <ul>
+                            <li>Required organizational knowledge of the QUIC protocol and its implementation</li>
+                        </ul>
+                    <li>Project 3: Developed an application that performs encryption and hashing for a specific required plaintext and key</li>
+                        <ul>
+                            <li>Required knowledge of the SHA-256 hashing algorithm and Python</li>
+                        </ul>
+                    <li><b>Hobby Project:</b> Once translated a 40 page book section from English to Russian <em>for a friend more than 4000 miles away</em></li>
+                </ul>
+            </section>
+            <section>
+                <h2 id="schedule"> Schedule</h2>
+                <table border="1">
+                    <tr>
+                        <td><b>Time</b></td>
+                        <td colspan="2"><b>Monday</b></td>
+                        <td colspan="2"><b>Tuesday</b></td>
+                        <td colspan="2"><b>Wednesday</b></td>
+                        <td colspan="2"><b>Thursday</b></td>
+                    </tr>
+                    <tr>
+                        <td><b>12:00 PM - 1:00 PM</b></td>
+                        <td colspan="2" rowspan="2">12:00 PM - 1:15 PM<br>
+                            CSCI225 Class
+                        </td>
+                        <td colspan="2" rowspan="2">12:15 PM - 1:30 PM<br>
+                            BADM225 Class
+                        </td>
+                        <td colspan="2" rowspan="2">12:00 PM - 1:15 PM<br>
+                            CSCI225 Class
+                        </td>
+                        <td colspan="2" rowspan="2">12:15 PM - 1:30 PM<br>
+                            BADM225 Class
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><b>1:00 PM - 2:00 PM</b></td>
+                    </tr>
+                    <tr>
+                        <td><b>2:00 PM - 3:00 PM</b></td>
+                        <td colspan="2"></td>
+                        <td colspan="2"></td>
+                        <td colspan="2"></td>
+                        <td colspan="2"></td>
+                    </tr>
+                    <tr>
+                        <td><b>3:00 PM - 4:30 PM</b></td>
+                        <td colspan="2"></td>
+                        <td colspan="2">3:05 PM - 4:20 PM<br>
+                            CSCI411 Class</td>
+                        <td colspan="2"></td>
+                        <td colspan="2">3:05 PM - 4:20 PM<br>
+                            CSCI411 Class</td>
+                    </tr>
+                </table>
+            </section>
+        </main>
+
+        <!-- Sidebar area-->
+        <aside>
+            <h2 id="assignment"> Assignment</h2>
+            <ol>
+                <li><a href="https://usca0-my.sharepoint.com/:w:/g/personal/yilianz_usca_edu1/IQBixyyHQnBBT752D35Cs47MAad_rgJOrWzxB2y23GVQHPE?e=Ps3ZkJ">Assignment 1</a></li>
+                <li><strong>Assignment 2</strong></li>
+                <li><strong>Assignment 3</strong></li>
+            </ol>
+        </aside>
+
+        <!-- Footer -->
+        <footer>
+            <p> Contact Information </p>
+            <ul>
+                <li><a href="mailto:tyulenev@usca.edu">tyulenev@usca.edu</a></li>
+            </ul>
+            <p>&copy; 2026 Tim Tyulenev; All rights reserved.</p>
+        </footer>
     </body>
 </html>
