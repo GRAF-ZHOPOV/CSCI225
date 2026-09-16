@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>CSCI225 ContactMe page of Tim Tyulenev</title>
+    </head>
+    <body>
+        <header>
+            <h1>Contact Me</h1>
+            <ul>
+                <li><a href="https://www.usca.edu/">USCA Main Page</a></li>
+                <li><a href="index.html">Back to Homepage</a></li>
+            </ul>
+        </header>
+        
+        <main>
+            <section>
+                <p>
+                    I would like for you to enjoy this video of Cape Flattery, Washington, USA. 
+                    I hope you find my website interesting enough to contact me later. The video is right below:
+                </p>
+                <video src="videos/IMG_6004.mov" controls muted width="500" height="350"></video>
+            </section>
+            <section>
+                <form name="feedback" action="any.php">
+                    <h3>Feedback:</h3>
+                    <p> First Name: 
+                        <input type="text" name="fname" placeholder="anonymous" required><br>
+                        Last Name: 
+                        <input type="text" name="lname" placeholder="anonymous" required><br>
+                        Email: 
+                        <input type="email" name="mail" placeholder="name@domain.com"><br>
+                        How old are you?
+                        <input type="number" min="0" max="122" name="age" placeholder="xx">
+                    </p>
+                    <p> Are you going to recommend this website to your friends? <br>
+                        <input type="radio" name="recommend" value="yes"> Yes 
+                        <input type="radio" name="recommend" value="no"> No <br>
+                        How much on a scale of 0 to 10 would you rate this website? <br>
+					    0<input type="range" min="0" max="10" name="rating">10
+                    </p>
+                    <p> What is your favorite website?
+                        <select name="favsite">
+                            <option value="google">Google</option>
+                            <option value="youtube">YouTube</option>
+                            <option value="facebook">Facebook</option>
+                            <option value="twitter">Twitter</option>
+                            <option value="instagram">Instagram</option>
+                        </select>
+                    </p>
+                    <p> Which social media do you use?
+					    <label><input type="checkbox" name="socialmedia" value="facebook"> Facebook</label>
+					    <label><input type="checkbox" name="socialmedia" value="twitter"> Twitter</label>
+					    <label><input type="checkbox" name="socialmedia" value="instagram"> Instagram</label>
+				    </p>
+                    Any comments or suggestions? <br>
+                    <textarea name="comment" cols="35" rows="5"></textarea><br>
+                    <input type="submit" name="submit" value="Submit">
+                    <input type="reset" name="reset" value="Reset the form">
+                </form>
+            </section>
+        </main>
+    </body>
+</html>
