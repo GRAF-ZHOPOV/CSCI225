@@ -1,0 +1,177 @@
+/* CSS code for Tim Tyulenev's CSCI225 Homepage */
+:root{
+    --main-bg-color: orange;
+    --main-font-color: hsl(134, 79%, 13%);
+    --main-font-size: 13px;
+    --main-font-weight: medium;
+    --main-font-family: Courier, monospace;
+    --main-border-radius: 5px;
+    --font-shadow: 0.5px 0.5px 1.5px black;
+    --table-bg-color: white;
+    --link-font-family: Arial, sans-serif;
+    --box-shadow: 5px 5px 15px black;
+    --nth-bg-color: gray;
+    
+}
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--main-bg-color);
+}
+header ul{
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 10px;
+}
+header li{margin-right: 20px;}
+header a{
+    color: var(--main-font-color);
+    text-decoration: none;
+}
+
+#introduction-sect{
+    --pos-top: 50px;
+    --pos-left: 92px; 
+    --font-color:var(--main-font-color); 
+    --font-size:var(--main-font-size);
+}
+#schedule-sect{
+    --pos-top: 435px;
+    --pos-left: 222px; 
+    --font-color:var(--main-font-color); 
+    --font-size:var(--main-font-size);
+}
+#portfolio-sect{
+    --pos-top: 50px; 
+    --pos-left: 840px; 
+    --font-color:var(--main-font-color); 
+    --font-size:var(--main-font-size);
+}
+#contact-info{
+    --pos-top: 430px; 
+    --pos-left: 530px; 
+    --font-color:var(--main-font-color); 
+    --font-size:var(--main-font-size);
+}
+#assignment{
+    --pos-top: 400px;
+    --pos-left: 980px;
+    --font-color: var(--main-font-color); 
+    --font-size: var(--main-font-size);
+}
+body{
+    background-image: url(../img/backgroundimage2.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    color: var(--main-text-color);
+    font-size: var(--main-font-size);
+    font-weight: var(--main-font-weight);
+    font-family: var(--main-font-family);
+    text-shadow: var(--font-shadow);
+    padding: 30px;
+    line-height: 1;
+    text-align: left;
+}
+section{
+    position: fixed;
+    top: var(--pos-top);
+    left: var(--pos-left);
+    color: var(--font-color);
+    font-weight: var(--main-font-weight);
+    font-family: var(--main-font-family);
+    text-shadow: var(--font-shadow);
+    line-height: 1;
+    text-align: left;
+}
+section h2{
+    text-decoration: underline;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+}
+#introduction-sect p::first-letter{
+    color: var(--main-bg-color);
+    font-size: 2em;
+    font-family: 'Times New Roman', Times, serif;
+}
+#introduction-sect  p{
+    opacity: 0;
+    transition: opacity 0.5s;
+    border: 2px solid black;
+    max-width: 350px;
+    border-radius: var(--main-border-radius);
+    box-shadow: var(--box-shadow);
+}
+#introduction-sect img, #portfolio-sect p, #portfolio-sect ul{ 
+    opacity: 0;
+    transition: opacity 0.5s;
+    max-width: 350px;
+}
+#schedule-sect  table{
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    position:fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 2.5px solid var(--main-text-color);
+    border-radius: var(--main-border-radius);
+    padding: 10px;
+    vertical-align: middle;
+    empty-cells: show;
+}
+#schedule-sect:hover table{
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(0.9);
+    
+}
+#schedule-sect table tr:first-child th, #schedule-sect table tr:first-child td{
+    background-color: var(--main-bg-color);
+}
+#schedule-sect table th, #schedule-sect table td{
+    background-color: var(--table-bg-color);
+    text-shadow: var(--text-shadow);
+}
+a{
+    text-decoration: none;
+    font-family: var(--link-font-family);
+} a:hover{ font-family: var(--main-font-family);}
+.container{position: relative;}
+aside{
+    position: absolute;
+    top: 400px;
+    left: 875px;
+    color: var(--main-font-color); 
+    font-size: var(--main-font-size);
+    opacity: 0;
+    transition: opacity 0.5s;
+} 
+#contact-info ul{
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+#introduction-sect:hover p, #introduction-sect:hover img, 
+#portfolio-sect:hover p, #portfolio-sect:hover ul, 
+#contact-info:hover ul, aside:hover { opacity: 1;}
+footer{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--main-bg-color);
+
+}
+footer p{ animation: horizontalmove 15s linear infinite;}
+@keyframes horizontalmove {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-30%);
+    }
+}
