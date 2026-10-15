@@ -2,44 +2,63 @@
 <html lang="en">
     <head>
         <title>CSCI225 ContactMe page of Tim Tyulenev</title>
-        
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     </head>
-    <body>
-        <header>
-            <h1>Contact Me</h1>
-            <ul>
-                <li><a href="https://www.usca.edu/">USCA Main Page</a></li>
-                <li><a href="index.html">Back to Homepage</a></li>
+    <body class="bg-primary fw-normal">
+        
+        <header class="row">
+        <nav class="col navbar bg-dark text-white fixed-top fst-italic">
+            <div class="container">
 
+            <h1 class="collapse navbar-collapse">Contact Me</h1>
+            <ul class="nav">
+                <li class="nav-item"><a class="nav-link" href="https://www.usca.edu/">USCA Main Page </a></li>
+                <li class="nav-item"><a class="nav-link" href="index.html">Back to Homepage</a></li>
+                <li class="nav-item"><a class="nav-link" href="https://github.com/GRAF-ZHOPOV">My GitHub</a></li>
+                <li class="nav-item"><a class="nav-link" href="https://www.usca.edu/academics/cse/csem/">More about USCA CS program</a></li>
             </ul>
+            </div>
+        </nav>
         </header>
-        <main>
-            <section>
+        <main class="container mt-5 pt-4 pb-4">
+            <div class="row g-4">
+            <section class="col mt5 text-white">
                 <p>
                     I would like for you to enjoy this video of Cape Flattery, Washington, USA. 
                     I hope you find my website interesting enough to contact me later. The video is right below:
                 </p>
-                <video src="videos/IMG_6004.mov" controls muted width="500" height="350"></video>
+                <div class="bg-white border rounded p-2"><video class="border rounded" src="videos/IMG_6004.mov" controls muted width="550" height="300"></video></div>
             </section>
-            <section>
+            <section class="col">
                 <form name="feedback" action="any.php">
-                    <h2>Feedback:</h2>
-                    <p> First Name: 
-                        <input type="text" name="fname" placeholder="anonymous" required><br>
-                        Last Name: 
-                        <input type="text" name="lname" placeholder="anonymous" required><br>
-                        Email: 
-                        <input type="email" name="mail" placeholder="name@domain.com"><br>
-                        How old are you?
-                        <input type="number" min="0" max="122" name="age" placeholder="xx">
-                    </p>
-                    <p> Are you going to recommend this website to your friends? <br>
-                        <input type="radio" name="recommend" value="yes"> Yes 
-                        <input type="radio" name="recommend" value="no"> No <br>
-                        How much on a scale of 0 to 10 would you rate this website? <br>
-					    0<input type="range" min="0" max="10" name="rating">10
-                    </p>
-                    <p> What is your favorite website?
+                <div class="bg-white border rounded p-3">
+                    <h2 class="collapse feedback-collapse">Feedback:</h2>
+                    <div class="form-floating mb-3"><input type="text" name="fname" placeholder="First Name:*" required></div>
+                    <div class="form-floating mb-3"><input type="text" name="lname" placeholder="Last Name:*" required></div>
+                    <div class="form-floating mb-3"><input type="email" name="mail" placeholder="Email Address"></div>
+                    <div class="form-floating mb-3"><input type="number" min="0" max="122" name="age" placeholder="Age"></div>
+                    
+                    <small class="form-text text-muted">Your email may be used to respond to your feedback.</small>
+                    
+                    <fieldset class="mt-3 mb-3">
+                        <div class="form-control">
+                        <p> Are you going to recommend this website to your friends? <br>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="recommend" value="yes">
+                                <label class="form-check-label" for="yes">Yes</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="recommend" value="no">
+                                <label class="form-check-label" for="no">No</label>
+                            </div>
+                            <div class="form-range">
+                            How much on a scale of 0 to 10 would you rate this website? <br>
+					        0<input type="range" min="0" max="10" name="rating">10
+                            </div>
+                        </p>
+                        </div>
+                        <div class="form-control">
+                        <p> What is your favorite website?
                         <select name="favsite">
                             <option value="google">Google</option>
                             <option value="youtube">YouTube</option>
@@ -47,18 +66,25 @@
                             <option value="twitter">Twitter</option>
                             <option value="instagram">Instagram</option>
                         </select>
-                    </p>
-                    <p> Which social media do you use?
-					    <label><input type="checkbox" name="socialmedia" value="facebook"> Facebook</label>
-					    <label><input type="checkbox" name="socialmedia" value="twitter"> Twitter</label>
-					    <label><input type="checkbox" name="socialmedia" value="instagram"> Instagram</label>
-				    </p>
-                    Any comments or suggestions? <br>
-                    <textarea name="comment" cols="35" rows="5"></textarea><br>
-                    <input type="submit" name="submit" value="Submit">
-                    <input type="reset" name="reset" value="Reset the form">
+                        </p>
+                        </div>
+                        <div class="form-control">
+                        <p> Which social media do you use?
+					        <label><input type="checkbox" name="socialmedia" value="facebook"> Facebook</label>
+					        <label><input type="checkbox" name="socialmedia" value="twitter"> Twitter</label>
+					        <label><input type="checkbox" name="socialmedia" value="instagram"> Instagram</label>
+				        </p>
+                        </div>
+                        Any comments or suggestions? <br>
+                        <div class="form-control"><textarea name="comment" cols="35" rows="5"></textarea></div>
+                        <input type="submit" name="submit" value="Submit">
+                        <input type="reset" name="reset" value="Reset the form">
+                    </fieldset>
+                </div>
                 </form>
             </section>
+            </div>
         </main>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
     </body>
 </html>
