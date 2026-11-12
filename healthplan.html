@@ -134,8 +134,7 @@
                         break;
                     }
                     attempts++;
-                } 
-                return {
+                } return {
                     mealplan: mealplan,
                     total: total
                 };
@@ -160,9 +159,7 @@
                 } else {
                     calorieTarget = calorieBasic;
                     category = "Normal";
-                }
-
-                return {
+                } return {
                     bmi: bmi,
                     target: calorieTarget,
                     basic: calorieBasic,
@@ -194,7 +191,7 @@
                 let age = Number(document.getElementById("age").value);
                 let gender = document.getElementById("gender").value;
 
-                if (weight <= 0 || height <= 0 || age <= 0 || gender === "") {
+                if (weight <= 0 || height <= 0 || age <= 0) {
                     alert("Please make sure to fill every input!");
                     return;
                 }
